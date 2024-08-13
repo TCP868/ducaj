@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ducaj Connections</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ducaj Connections, DucajConnections">
+<meta name="Keywords" content="men, mens, clothing,suriname,paramaribo,shopping,clothes">
+<meta name="author" content="Tricia Pierre">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .w3-sidebar a {font-family: "Roboto", sans-serif}
+    body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+   
+  .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+.btn {
+  background-color: #2196f3;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {background-color: #45a049;}
+a {color: #2196F3;}
+
+hr {border: 1px solid lightgrey;}
+
+span.price {float: right;color: grey;}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {flex-direction: column-reverse;}
+  .col-25 {margin-bottom: 20px;}
+}  
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {background-color: #2196F3;}
+
+input:focus + .slider {box-shadow: 0 0 1px #2196F3;}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* Rounded sliders */
+.slider.round {border-radius: 34px;}
+.slider.round:before {border-radius: 50%;} 
+
+</style>
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+<div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+ <header class="w3-container w3-xlarge w3-black">
+  <a href="index.html"><img src="images/DC Logo_blk.png" alt="company logo" width="100px" align="left"></a>
+  <p class="w3-right">
+  <i><a href="cart.html" class="fa fa-shopping-cart w3-margin-right"></i></a>
+  <i class="fa fa-search"></i>
+  </p>
+  </header>
+
+  <h2>Delivery Details</h2>
+  <div class="row">
+  <div class="col-75">
+  <div class="container">
+  <form action="/action_page.php">
+        
+  <div class="row">
+  <div class="col-50">
+  <h3>Delivery Address</h3>
+  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+  <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+  <input type="text" id="email" name="email" placeholder="john@example.com">
+  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+  <label for="city"><i class="fa fa-institution"></i> City</label>
+  <input type="text" id="city" name="city" placeholder="Paramaribo">
+  </div>
+  
+<div class="col-50">
+<h3>Payment Options</h3>
+<div class="icon-container">
+</div>
+              <label for="cname">In-Store</label>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+              <label for="ccnum">Cash On Delivery</label>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+              <div class="row">
+              </div>
+            </div>
+            
+          </div>
+          <input type="submit" value="Continue to checkout" class="btn">
+        </form>
+      </div>
+    </div>
+    <div class="col-25">
+      <div class="container">
+        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+        <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+        <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+        <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+        <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+        <hr>
+        <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="w3-container w3-black"><h5></h5></div>
+
+ <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s3">
+        <h4>Contact Us</h4>
+        <p><i class="fa fa-fw fa-phone"></i>+597 766-7455</p>
+        <p><i class="fa fa-fw fa-envelope"></i> ducajconnections@gmail.com</p>
+        <br>
+        <i><a href="https://www.facebook.com/ducajconnections"class="fa fa-facebook-official w3-hover-opacity w3-large"></a></i>
+        <i><a href="https://www.instagram.com/ducajconnections?igsh=d2V4aGM10XRlaDhl" class="fa fa-instagram w3-hover-opacity w3-large"></a></i>
+        <i><a href="https://www.facebook.com/ducajconnections"class="fa fa-snapchat w3-hover-opacity w3-large"></a></i>
+        <a href="https://www.tiktok.com/@ducajconnections?_t=8oWBxmRjhmn&_r=1"><img src="images/tik-small.png" class="w3-hover-opacity width=10%"></a>
+</div>
+
+      <div class="w3-col s4 w3-justify w3-right">
+        <h4>Store</h4>
+        <img src="images/store_front.jpg" alt="Store front"style="width: 150px;"/>
+ </a>
+        <p><i class="fa fa-fw fa-map-marker"></i>Ducaj Connections
+          <br>
+          Kwattweg 198,
+          <br>
+          Paramaribo,
+          <br>
+          Suriname.</p>
+         </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Copyright  &#169 2024 <a href="" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></div>
+</div>
+
+  <!-- End page content -->
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
